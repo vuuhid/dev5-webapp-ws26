@@ -1,6 +1,12 @@
 {
 	"name": "C# (.NET)",
 	"image": "mcr.microsoft.com/devcontainers/dotnet:2-9.0",
+	"runArgs": [
+		"--name",
+		"deo-devcontainer",
+		"--network",
+		"deo-network"
+	],
 	"postCreateCommand": "dotnet restore --locked-mode && dotnet dev-certs https",
 	"customizations": {
 		"vscode": {
